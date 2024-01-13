@@ -1,0 +1,237 @@
+
+.admin__main1 {
+    text-align: center;
+}
+
+.form-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.form-container1 {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.form-title {
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.formlabel {
+    text-align: left;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.forminput {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.form-error {
+    color: red;
+}
+
+.form-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.form-button-reset {
+    padding: 10px 10px;
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    
+}
+
+.form-button-reset:hover {
+    background-color: #999;
+}
+.form-link {
+    text-decoration: none;
+    color: #007bff;
+}
+    .admin__list {
+        text-align: center;
+    }
+
+    .admin__list-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .admin__table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .admin__table th {
+        font-weight: bold;
+        padding: 10px;
+        text-align: center;
+        background-color: #f2f2f2;
+    }
+
+    .admin__table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .admin__table td {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .admin__button {
+        padding: 5px 10px;
+        margin-right: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .admin__button-link {
+        text-decoration: none;
+    }
+
+    .admin__list-buttons {
+        margin-top: 10px;
+    }
+ /* Nút "Sửa" */
+ .admin__edit-button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: 5px;
+}
+.admin__edit-button:hover {
+    background-color: #0056b3;
+}
+/* Nút "Xóa" */
+.admin__delete-button {
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+}
+.admin__delete-button:hover {
+    background-color: #c82333;
+}
+.canchodeo{
+    width: 200px;
+}
+input[type="radio"] {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.form-group1 {
+    display: flex;  /* Sử dụng flexbox để căn trái */
+    align-items: center; /* Căn dọc giữa theo trục y */
+}
+.form-label {
+    margin-right: 10px; /* Tạo khoảng cách giữa label và radio input */
+}
+.canlai {
+    max-width: 300px;
+    word-wrap: break-word; /* Tự động xuống dòng khi cần */
+}
+.mota{
+    max-width: 550px;
+}
+
+/* Style for formlabel */
+.formlabel {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+/* Style for allcoso container */
+.allcoso {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Adjust the margin to your preference */
+}
+
+/* Style for each coso item */
+.coso {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Adjust the margin between items to your preference */
+}
+
+/* Style for labels */
+.coso label {
+    margin-right: 5px; /* Adjust the margin to your preference */
+}
+
+/* Style for checkboxes */
+.checkbox {
+    /* Your existing styles for checkboxes */
+    margin-right: 5px; /* Adjust the margin to your preference */
+}
+
+.coso label {
+    font-family: sans-serif; 
+    font-size: 16px; /* Điều chỉnh kích thước font theo ý thích của bạn */
+    color: #000000; /* Điều chỉnh màu chữ theo ý thích của bạn */
+}
+/* Style for nlte container */
+.nlte {
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    justify-content: space-between; /* Các phần tử sẽ được căn cách đều ra hai bên */
+}
+
+/* Style for form-group1 */
+.form-group1 {
+    flex: 1; /* Phần tử sẽ chiếm một phần bằng nhau trong không gian của flex container */
+}
+
+/* Style for formlabel1 */
+.formlabel1 {
+    display: block;
+    margin-bottom: 5px; /* Khoảng cách giữa label và select, điều chỉnh theo ý muốn của bạn */
+}
+
+/* Style for forminput1 */
+.forminput1 {
+    width: 90%; /* Đảm bảo rằng select sẽ chiếm toàn bộ chiều rộng của form-group1 */
+    padding: 8px; /* Điều chỉnh padding theo ý muốn của bạn */
+}
+
+
+
