@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['username'] = $row['username'];
 
             // Chuyển hướng đến trang dashboard hoặc trang cần thiết
-            header("Location: dashboard.html");
+            header("Location: dashboarduser.php");
             exit();
         } else {
             // Sai mật khẩu

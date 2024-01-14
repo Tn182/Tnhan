@@ -66,7 +66,7 @@
 
                     <div class="dropdown">
                         <a class="btn dropdown-toggle" href="#" role="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                            Chào <?php echo $userName; ?>
+                            Chào 
                         </a>
 
                         <ul class="dropdown-menu" aria-labelledby="userDropdown">
@@ -79,7 +79,6 @@
             </div>
         </nav>
         
-
         <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
             <div class="container">
                 <div class="row">
@@ -206,6 +205,44 @@
 
             <div class="container">
                 <div class="row">
+                <?php
+// themtintuc.php
+$servername = "127.0.0.1";
+$username = "root";
+$password = "Tnhan182";
+$dbname = "webgiamcantangcan";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Kết nối đến cơ sở dữ liệu thất bại: " . $conn->connect_error);
+}
+
+$sqlSelect = "SELECT * FROM news ORDER BY created_at DESC LIMIT 6";
+$result = $conn->query($sqlSelect);
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        echo '<div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">';
+        echo '<div class="custom-block bg-white shadow-lg">';
+        echo '<a href="topics-detail.html">';
+        echo '<div class="d-flex">';
+        echo '<div>';
+        echo '<h5 class="mb-2">' . $row["title"] . '</h5>';
+        echo '<p class="mb-0">' . $row["content"] . '</p>';
+        echo '</div>';
+        echo '</div>';
+        echo '<img src="' . $row["image"] . '" class="custom-block-image img-fluid" alt="">';
+        echo '</a>';
+        echo '</div>';
+        echo '</div>';
+    }
+} else {
+    echo "Không có tin tức nào.";
+}
+
+$conn->close();
+?>
 
                     <div class="col-12">
                         <div class="tab-content" id="myTabContent">
@@ -488,6 +525,7 @@
                 </div>
             </div>
         </section>
+
 
 
         <section class="timeline-section section-padding" id="section_3">

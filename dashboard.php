@@ -153,7 +153,7 @@ if (isset($_SESSION['iduser'])) {
         }
     } else {
         // Nếu không tìm thấy thông tin người dùng, chuyển hướng đến trang nhập thông tin
-        header("Location: infouser.html");
+        header("Location: infouser.php");
         exit();
     }
 

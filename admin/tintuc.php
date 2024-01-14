@@ -58,29 +58,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Đóng kết nối đến cơ sở dữ liệu
 $conn->close();
 ?>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thêm Tin Tức</title>
-</head>
-<body>  
-<h2>Thêm Tin Tức Mới</h2>
-<form method="post" action="tintuc.php" enctype="multipart/form-data">
-    <label for="title">Tiêu đề:</label>
-    <input type="text" id="title" name="title" required><br>
-
-    <label for="content">Nội dung:</label>
-    <textarea id="content" name="content" required></textarea><br>
-
-    <label for="image">Chọn ảnh:</label>
-    <input type="file" name="image" id="image" accept="image/*" required>
-
-    <input type="submit" value="Thêm Tin Tức">
-</form>
-</body>
-</html>

@@ -108,7 +108,7 @@
 
             $("#loadNewdel").click(function (e) {
                 e.preventDefault();
-                loadContent("xoatintuc.php");
+                loadContent("capnhattin.php");
             });
 
             function loadContent(url, callback) {

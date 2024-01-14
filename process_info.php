@@ -61,7 +61,7 @@ if (isset($_SESSION['iduser'], $_POST['height'], $_POST['weight'], $_POST['gende
 
     $stmtCheckUpdate->close();
     if ($_SESSION['updated']) {
-        echo '<br><a href="infouser.html">Xem Thông Tin Người Dùng</a>';
+        echo '<br><a href="dashboard.php">Xem Thông Tin Người Dùng</a>';
     }
 } else {
     header("Location: login_register.html");

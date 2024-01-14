@@ -99,7 +99,7 @@ button:hover {
     <main>
     <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="dashboard.html">
+                <a class="navbar-brand" href="dashboarduser.php">
                     <img src="image/logo.png" alt="Logo" class="logo-img">
                     <span>Healthy S</span>
                 </a>

@@ -21,6 +21,22 @@ $result = $conn->query($query);
 <head>
     <meta charset="UTF-8">
     <title>Danh sách Khách Hàng - Health S</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
 </head>
 
 <body>

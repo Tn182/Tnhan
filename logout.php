@@ -5,6 +5,6 @@ session_start();
 session_destroy();
 
 // Chuyển hướng về trang đăng nhập sau khi đăng xuất
-header("Location: index.html");
+header("Location: index.php");
 exit();
 ?>

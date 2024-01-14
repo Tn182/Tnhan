@@ -209,7 +209,13 @@
 
             <div class="container">
                 <div class="row">
-                <?php
+      
+
+                    <div class="col-12">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="design-tab-pane" role="tabpanel" aria-labelledby="design-tab" tabindex="0">
+                                <div class="row">
+                                <?php
 // themtintuc.php
 $servername = "127.0.0.1";
 $username = "root";
@@ -236,7 +242,7 @@ if ($result->num_rows > 0) {
         echo '<p class="mb-0">' . $row["content"] . '</p>';
         echo '</div>';
         echo '</div>';
-        echo '<img src="' . $row["image"] . '" class="custom-block-image img-fluid" alt="">';
+        echo '<img src="admin/' . $row["image"] . '" class="custom-block-image img-fluid" alt="">';
         echo '</a>';
         echo '</div>';
         echo '</div>';
@@ -247,61 +253,16 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 ?>
-
-                    <div class="col-12">
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="design-tab-pane" role="tabpanel" aria-labelledby="design-tab" tabindex="0">
-                                <div class="row">
                                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Uống nhiều sữa bổ sung protein có gây tăng cân?</h5>
-
-                                                        <p class="mb-0">Sữa protein rất cần thiết cho quá trình phát triển và duy trì khối cơ. Để đảm bảo đủ protein, nhiều người tập gym không chỉ ăn thịt, trứng mà còn uống sữa bổ sung protein. Thậm chí, họ còn uống nhiều lần trong ngày.</p>
-                                                    </div>
-                                                </div>
-
-                                                <img src="image/new3.jpg" class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
+                                        
                                     </div>
 
                                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Graphic</h5>
-
-                                                            <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-
-                                                    <span class="badge bg-design rounded-pill ms-auto">75</span>
-                                                </div>
-
-                                                <img src="images/topics/undraw_Redesign_feedback_re_jvm0.png" class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
+                                        
                                     </div>
 
                                     <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Logo Design</h5>
-
-                                                            <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-
-                                                    <span class="badge bg-design rounded-pill ms-auto">100</span>
-                                                </div>
-
-                                                <img src="images/topics/colleagues-working-cozy-office-medium-shot.png" class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -321,7 +282,7 @@ $conn->close();
                                                         <span class="badge bg-advertising rounded-pill ms-auto">30</span>
                                                     </div>
 
-                                                    <img src="images/topics/undraw_online_ad_re_ol62.png" class="custom-block-image img-fluid" alt="">
+                                                    <img src="https://www.youtube.com/watch?v=n561ItiHcmU" class="custom-block-image img-fluid" alt="">
                                                 </a>
                                             </div>
                                         </div>
@@ -539,7 +500,7 @@ $conn->close();
                 <div class="row">
 
                     <div class="col-12 text-center">
-                        <h2 class="text-white mb-4">How does it work?</h1>
+                        <h2 class="text-white mb-4">Làm thế nào để bắt đầu</h1>
                     </div>
 
                     <div class="col-lg-10 col-12 mx-auto">
@@ -550,9 +511,13 @@ $conn->close();
                                 </div>
 
                                 <li>
-                                    <h4 class="text-white mb-3">Search your favourite topic</h4>
+                                    <h4 class="text-white mb-3">Tìm kiếm chế độ dinh dưỡng phù hợp</h4>
 
-                                    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, cumque magnam? Sequi, cupiditate quibusdam alias illum sed esse ad dignissimos libero sunt, quisquam numquam aliquam? Voluptas, accusamus omnis?</p>
+                                    <p class="text-white">Để tìm ra chế độ dinh dưỡng phù hợp với mình, bạn cần cân nhắc các yếu tố sau:
+
+Mục tiêu giảm cân của bạn là gì? Bạn muốn giảm bao nhiêu cân? Trong bao lâu?
+Bạn có bất kỳ vấn đề sức khỏe nào không? Một số chế độ ăn kiêng có thể không phù hợp với những người có vấn đề sức khỏe nhất định.
+Bạn thích ăn những gì? Bạn có thể tuân theo một chế độ ăn kiêng mà bạn không thích ăn không?</p>
 
                                     <div class="icon-holder">
                                       <i class="bi-search"></i>
@@ -560,9 +525,9 @@ $conn->close();
                                 </li>
                                 
                                 <li>
-                                    <h4 class="text-white mb-3">Bookmark &amp; Keep it for yourself</h4>
+                                    <h4 class="text-white mb-3">Lập kế hoạch ăn uống</h4>
 
-                                    <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint animi necessitatibus aperiam repudiandae nam omnis est vel quo, nihil repellat quia velit error modi earum similique odit labore. Doloremque, repudiandae?</p>
+                                    <p class="text-white">Một khi bạn đã chọn được chế độ dinh dưỡng phù hợp, bạn cần lập kế hoạch ăn uống cụ thể. Kế hoạch ăn uống này sẽ giúp bạn theo dõi lượng calo và chất dinh dưỡng bạn tiêu thụ mỗi ngày.</p>
 
                                     <div class="icon-holder">
                                       <i class="bi-bookmark"></i>
@@ -570,9 +535,13 @@ $conn->close();
                                 </li>
 
                                 <li>
-                                    <h4 class="text-white mb-3">Read &amp; Enjoy</h4>
+                                    <h4 class="text-white mb-3">Theo dõi tiến độ</h4>
 
-                                    <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi vero quisquam, rem assumenda similique voluptas distinctio, iste est hic eveniet debitis ut ducimus beatae id? Quam culpa deleniti officiis autem?</p>
+                                    <p class="text-white">Theo dõi tiến độ của bạn là một cách quan trọng để đảm bảo rằng bạn đang đi đúng hướng. Bạn có thể theo dõi cân nặng, số đo vòng eo hoặc số đo khác của mình.
+
+Bạn cũng nên theo dõi lượng calo và chất dinh dưỡng bạn tiêu thụ mỗi ngày. Điều này sẽ giúp bạn đảm bảo rằng bạn đang tuân theo kế hoạch ăn uống của mình.
+
+Nếu bạn thấy mình không đạt được mục tiêu giảm cân, bạn có thể cần điều chỉnh kế hoạch ăn uống hoặc hoạt động thể chất của mình.</p>
 
                                     <div class="icon-holder">
                                       <i class="bi-book"></i>
