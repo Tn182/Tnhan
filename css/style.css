@@ -1157,3 +1157,7 @@
     margin-right: 10px
   }
 
+  .custom-block {
+    display: inline-block; /* hoặc sử dụng display: flex; */
+    width: 100%; /* Cung cấp chiều rộng đầy đủ cho mỗi tin tức */
+}

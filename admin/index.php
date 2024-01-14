@@ -42,8 +42,8 @@
                     <i class="uil-envelope-download fa-fw"></i><span>Tin Tức</span>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="newsDropdown">
-                    <li><a class="dropdown-item" href="index.php?act=danhs_tintuc">Danh sách tin tức</a></li>
-                    <li><a class="dropdown-item" href="index.php?act=them_tintuc">Thêm Tin tức</a></li>
+                    <li><a class="dropdown-item" href="#" id="loadNew">Thêm Tin tức</a></li>
+                    <li><a class="dropdown-item" href="#" id="loadNewdel">Xóa Tin tức</a></li>
                 </ul>
             </li>
             <!-- Các mục menu khác -->
@@ -85,21 +85,41 @@
     </section>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function () {
             $("#loadContent").click(function (e) {
                 e.preventDefault();
-                $("#contentContainer").load("khachhang/danhsachkhachhang.php");
+                loadContent("khachhang/danhsachkhachhang.php");
             });
 
             $("#loadContentCapNhat").click(function (e) {
                 e.preventDefault();
-                $("#contentContainer").load("khachhang/capnhat.php");
+                loadContent("khachhang/capnhat.php");
             });
+
+            $("#loadNew").click(function (e) {
+                e.preventDefault();
+                loadContent("themtintuc.php", function () {
+                    CKEDITOR.replace('content');
+                });
+            });
+
+            $("#loadNewdel").click(function (e) {
+                e.preventDefault();
+                loadContent("xoatintuc.php");
+            });
+
+            function loadContent(url, callback) {
+                $("#contentContainer").load(url, function () {
+                    if (callback) {
+                        callback();
+                    }
+                });
+            }
         });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
