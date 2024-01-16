@@ -46,6 +46,24 @@
                     <li><a class="dropdown-item" href="#" id="loadNewdel">Xóa Tin tức</a></li>
                 </ul>
             </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="newsDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="uil-envelope-download fa-fw"></i><span>Quản lý thực phẩm</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="newsDropdown">
+                    <li><a class="dropdown-item" href="#" id="loadTp">Thêm thực phẩm</a></li>
+                    <li><a class="dropdown-item" href="#" id="loadqltp">Quản lý thực phẩm</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="newsDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="uil-envelope-download fa-fw"></i><span>Quản lý bài tập</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="newsDropdown">
+                    <li><a class="dropdown-item" href="#" id="loadtbt">Thêm bài tập</a></li>
+                    <li><a class="dropdown-item" href="#" id="loadqlbt">Quản lý bài tập</a></li>
+                </ul>
+            </li>
             <!-- Các mục menu khác -->
         </ul>
     </aside>
@@ -101,25 +119,43 @@
 
             $("#loadNew").click(function (e) {
                 e.preventDefault();
-                loadContent("themtintuc.php", function () {
+                loadContent("tintuc/themtintuc.php", function () {
                     CKEDITOR.replace('content');
                 });
             });
 
             $("#loadNewdel").click(function (e) {
                 e.preventDefault();
-                loadContent("capnhattin.php");
+                loadContent("tintuc/capnhattin.php");
             });
 
-            function loadContent(url, callback) {
-                $("#contentContainer").load(url, function () {
-                    if (callback) {
-                        callback();
-                    }
-                });
-            }
+            $("#loadTp").click(function (e) {
+            e.preventDefault();
+            loadContent("themthucpham.php");
         });
-    </script>
+        $("#loadqltp").click(function (e) {
+            e.preventDefault();
+            loadContent("capnhatthucpham.php");
+        });
+        $("#loadtbt").click(function (e) {
+            e.preventDefault();
+            loadContent("quanlybaitap.php");
+        });
+        $("#loadqlbt").click(function (e) {
+            e.preventDefault();
+            loadContent("capnhatbaitap.php");
+        });
+
+
+        function loadContent(url, callback) {
+            $("#contentContainer").load(url, function () {
+                if (callback) {
+                    callback();
+                }
+            });
+        }
+    });
+</script>
 </body>
 
 </html>

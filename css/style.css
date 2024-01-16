@@ -278,7 +278,7 @@
   }
   
   .navbar {
-    background: transparent;
+    background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);;
     border-bottom: 1px solid rgba(128, 208, 199, 0.35);
     z-index: 9;
   }
@@ -1160,4 +1160,58 @@
   .custom-block {
     display: inline-block; /* hoặc sử dụng display: flex; */
     width: 100%; /* Cung cấp chiều rộng đầy đủ cho mỗi tin tức */
+}
+/* Thêm phần màu nền và định dạng cho phần thông tin người dùng */
+.container.mt-5 {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Chỉnh định dạng cho các phần thông tin người dùng */
+.col-md-8.text-center {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Định dạng cho các thông tin cụ thể như chiều cao, cân nặng, giới tính, ngày sinh, đã cập nhật thông tin, và tình trạng cân nặng */
+.col-md-8.text-center p {
+  margin-bottom: 10px;
+}
+
+/* Định dạng cho tiêu đề chào mừng */
+.col-md-8.text-center h1 {
+  color: #007bff; /* Màu chữ xanh dương */
+}
+
+/* Định dạng cho các thông tin BMI và tình trạng cân nặng dựa trên giá trị BMI */
+.col-md-8.text-center p.bmi-info {
+  font-weight: bold;
+  color: #28a745; /* Màu chữ xanh lá cây */
+}
+
+/* Định dạng cho dropdown menu chào user */
+.dropdown a {
+  color: #007bff;
+}
+
+/* Định dạng cho phần dropdown menu */
+.dropdown-menu {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Định dạng cho phần dropdown item */
+.dropdown-menu a {
+  color: #333;
+}
+
+/* Định dạng cho dropdown item khi di chuột qua */
+.dropdown-menu a:hover {
+  background-color: #007bff;
+  color: #fff;
 }

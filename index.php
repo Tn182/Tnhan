@@ -49,19 +49,19 @@
                             <a class="nav-link click-scroll" href="#section_1">Trang Chủ</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dinh Dưỡng</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">DINH DƯỠNG</a>
 
                             <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                <li><a class="dropdown-item" href="topics-listing.html">Nam</a></li>
+                                <li><a class="dropdown-item" href="dinhduong.php">Nam</a></li>
 
                                 <li><a class="dropdown-item" href="contact.html">Nữ</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">BÀI TẬP</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">CÁC BÀI TẬP LUYỆN</a>
 
                             <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                <li><a class="dropdown-item" href="topics-listing.html">THẤP</a></li>
+                                <li><a class="dropdown-item" href="baitapsk.php">THẤP</a></li>
                                 <li><a class="dropdown-item" href="contact.html">TRUNG BÌNH</a></li>
                                 <li><a class="dropdown-item" href="contact.html">CAO</a></li>
                             </ul>

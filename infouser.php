@@ -35,63 +35,105 @@ session_start();
     <link href="css/bootstrap-icons.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <style>
-        form {
-    max-width: 400px; /* Giảm chiều rộng của biểu mẫu */
-    margin: auto;
-    padding: 20px; /* Thêm padding để tạo khoảng trắng xung quanh biểu mẫu */
-    border: 1px solid #ccc; /* Thêm đường viền để phân biệt biểu mẫu từ nền */
-    border-radius: 8px; /* Bo tròn góc của biểu mẫu */
-}
-
-h1 {
-    text-align: center; /* Canh giữa tiêu đề */
-}
-
-label {
-    display: block;
-    margin-bottom: 6px; /* Giảm khoảng cách dưới mỗi nhãn */
-}
-
-input,
-select,
-button {
-    width: 100%; /* Làm cho các trường nhập và nút giữa chiều rộng của biểu mẫu */
-    padding: 10px; /* Tăng kích thước padding cho trường nhập và nút */
-    margin-bottom: 10px; /* Giảm khoảng cách dưới mỗi trường nhập và nút */
-    box-sizing: border-box; /* Bảo đảm rằng kích thước tổng cộng bao gồm padding và border */
-}
-
-button {
-    background-color: #4CAF50; /* Màu nền cho nút */
-    color: white; /* Màu chữ cho nút */
-    border: none;
-    border-radius: 4px; /* Bo tròn góc của nút */
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049; /* Màu nền khi di chuột qua nút */
-}
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
+            margin-bottom: 20px; /* Điều chỉnh giá trị để thay đổi khoảng cách */
         }
 
-        form {
-            width: 300px; /* Độ rộng của khung nhập liệu */
-            padding: 20px;
-            border: 1px solid #ccc; /* Viền xung quanh khung nhập liệu */
-            border-radius: 8px; /* Bo tròn góc của khung nhập liệu */
+        /* Navbar styling */
+        nav.navbar {
+            background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
         }
+
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar-brand span {
+            color: white;
+        }
+
+        .navbar-nav a.nav-link {
+            color: white !important;
+        }
+
+        .dropdown-menu {
+            background-color: #f8f9fa;
+        }
+
+        .dropdown-menu a {
+            color: #333;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Form styling */
+        form {
+    max-width: 400px;
+    margin: auto;
+    margin-top: 80px; /* Điều chỉnh giá trị để thay đổi khoảng cách */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 
         h1 {
             text-align: center;
-            color: #007bff; /* Màu chữ là màu xanh dương */
-            font-size: 24px; /* Kích thước chữ là 24px */
-            margin-bottom: 20px; /* Khoảng cách dưới là 20px */
+            color: #007bff;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Main styling */
+        main {
+            padding: 40px 0;
+        }
+
+        /* Footer styling */
+        footer {
+            padding: 20px 0;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 767px) {
+            form {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -115,7 +157,7 @@ button:hover {
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-lg-5 me-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="dashboard.html">Trang Chủ</a>
+                            <a class="nav-link click-scroll" href="dashboarduser.php">Trang Chủ</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="nutritionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dinh Dưỡng</a>
@@ -158,28 +200,28 @@ button:hover {
             </div>
         </nav>
            
-            <form action="process_info.php" method="post">
+        <form action="process_info.php" method="post">
             <h1>Nhập Thông Tin Người Dùng</h1>
-                <label for="height">Chiều cao (cm):</label>
-                <input type="number" name="height" required><br>
+            <label for="height">Chiều cao (cm):</label>
+            <input type="number" name="height" required><br>
 
-                <label for="weight">Cân nặng (kg):</label>
-                <input type="number" name="weight" required><br>
+            <label for="weight">Cân nặng (kg):</label>
+            <input type="number" name="weight" required><br>
 
-                <label for="gender">Giới tính:</label>
-                <select name="gender" required>
-                    <option value="male">Nam</option>
-                    <option value="female">Nữ</option>
-                    <option value="other">Khác</option>
-                </select><br>
+            <label for="gender">Giới tính:</label>
+            <select name="gender" required>
+                <option value="male">Nam</option>
+                <option value="female">Nữ</option>
+                <option value="other">Khác</option>
+            </select><br>
 
-                <label for="birthdate">Ngày sinh:</label>
-                <input type="date" name="birthdate" required><br>
+            <label for="birthdate">Ngày sinh:</label>
+            <input type="date" name="birthdate" required><br>
 
-                <button type="submit">Lưu thông tin</button>
-            </form>
-       
+            <button type="submit">Lưu thông tin</button>
+        </form>
     </main>
+
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.sticky.js"></script>

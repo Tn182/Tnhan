@@ -28,7 +28,8 @@ if (isset($_SESSION['iduser'])) {
         // Kiểm tra xem thông tin đã được cập nhật hay chưa
         if ($row['updated']) {
             // Lưu tên người dùng vào biến $userName
-            $userName = $row['iduser'];
+            $iduser = $row['iduser'];
+            
 
             // Tính toán BMI
             $bmi = $row['weight'] / (($row['height'] / 100) ** 2);
@@ -46,12 +47,114 @@ if (isset($_SESSION['iduser'])) {
     <link href='css/bootstrap.min.css' rel='stylesheet'>
     <link href='css/bootstrap-icons.css' rel='stylesheet'>
     <link href='css/style.css' rel='stylesheet'>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            margin-bottom: 20px; /* Điều chỉnh giá trị để thay đổi khoảng cách */
+        }
+
+        /* Navbar styling */
+        nav.navbar {
+            background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar-brand span {
+            color: white;
+        }
+
+        .navbar-nav a.nav-link {
+            color: white !important;
+        }
+
+        .dropdown-menu {
+            background-color: #f8f9fa;
+        }
+
+        .dropdown-menu a {
+            color: #333;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Form styling */
+        form {
+    max-width: 400px;
+    margin: auto;
+    margin-top: 80px; /* Điều chỉnh giá trị để thay đổi khoảng cách */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Main styling */
+        main {
+            padding: 40px 0;
+        }
+
+        /* Footer styling */
+        footer {
+            padding: 20px 0;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 767px) {
+            form {
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 <body id='top'>
 <main>
     <nav class='navbar navbar-expand-lg'>
         <div class='container'>
-            <a class='navbar-brand' href='dashboard.html'>
+            <a class='navbar-brand' href='dashboarduser.php'>
                 <img src='image/logo.png' alt='Logo' class='logo-img'>
                 <span>Healthy S</span>
             </a>
@@ -98,7 +201,7 @@ if (isset($_SESSION['iduser'])) {
 
                 <div class='dropdown'>
                     <a class='btn dropdown-toggle' href='#' role='button' id='userDropdown' data-bs-toggle='dropdown' aria-expanded='false'>
-                        Chào $userName
+                        Chào $iduser
                     </a>
 
                     <ul class='dropdown-menu' aria-labelledby='userDropdown'>
@@ -114,7 +217,7 @@ if (isset($_SESSION['iduser'])) {
     <div class='container mt-5'>
         <div class='row justify-content-center'>
             <div class='col-md-8 text-center'>
-                <h1 class='mb-4'>Chào mừng bạn đến trang Dashboard, $userName!</h1>
+                <h1 class='mb-4'>Chào mừng bạn đến trang Dashboard, $iduser!</h1>
                 <p>Chiều cao: {$row['height']} cm</p>
                 <p>Cân nặng: {$row['weight']} kg</p>
                 <p>Giới tính: {$row['gender']}</p>
